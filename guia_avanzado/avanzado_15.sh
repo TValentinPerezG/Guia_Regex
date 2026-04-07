@@ -17,4 +17,4 @@
 
 # 15 Las contraseñas que comienzen y terminen con el mismo caracter.
 
-grep -Eio ",\w+\s*$" contraseñas.csv | sed 's/,//'
+grep -Eio ",(\S).*\1$" contraseñas.csv | sed 's/,//'
